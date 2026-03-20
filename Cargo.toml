@@ -1,0 +1,31 @@
+[package]
+name = "coding-agent-loop"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Autonomous coding agent loop library"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/bkrabach/coding-agent-loop"
+readme = "README.md"
+keywords = ["agent", "llm", "coding", "ai", "openai"]
+categories = ["development-tools", "asynchronous"]
+
+[dependencies]
+tokio        = { version = "1", features = ["full"] }
+serde        = { version = "1", features = ["derive"] }
+serde_json   = "1"
+async-trait  = "0.1"
+futures      = "0.3"
+thiserror    = "1"
+chrono       = { version = "0.4", features = ["serde"] }
+uuid         = { version = "1", features = ["v4", "serde"] }
+tracing      = "0.1"
+tokio-util   = "0.7"
+globset      = "0.4"
+regex        = "1"
+sha2         = "0.10"
+
+[dev-dependencies]
+tokio     = { version = "1", features = ["rt-multi-thread", "macros"] }
+anyhow    = "1"
+tempfile  = "3"

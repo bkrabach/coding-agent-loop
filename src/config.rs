@@ -153,8 +153,10 @@ mod tests {
 
     #[test]
     fn apply_patch_clears_reasoning_effort() {
-        let mut cfg = SessionConfig::default();
-        cfg.reasoning_effort = Some("medium".into());
+        let mut cfg = SessionConfig {
+            reasoning_effort: Some("medium".into()),
+            ..Default::default()
+        };
         cfg.apply_patch(SessionConfigPatch {
             reasoning_effort: Some(None),
             ..Default::default()

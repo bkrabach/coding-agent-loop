@@ -2119,7 +2119,7 @@ mod tests {
     #[test]
     fn cross_provider_parity_acknowledged() {
         // Documentation test — verifies the comment above compiles and passes.
-        assert!(true, "V2-CAL-010: cross-provider parity acknowledged");
+        // V2-CAL-010: cross-provider parity acknowledged — no assertion needed.
     }
 
     // -----------------------------------------------------------------------
